@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		
+		<meta name="viewport" content="width=device-width" />	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />	
+		
+		<link rel="stylesheet" type="text/css" href="main-style.css">
+		
+		<script src="jquery-1.8.3.min.js" type="text/javascript"></script>
+		
+	</head>
+	
+	<body onresize="reSizeWebsite()">
+		<div id="main-content">
+		
+			<header>
+				<ul id="main-navigation">
+					<li class="main-navigation-button">one</li>
+					<li class="main-navigation-button">two</li>
+					<li class="main-navigation-button">three</li>
+				</ul>
+			</header>
+			
+			<main id="content-holder">
+				<ul id="content-main-holder">
+					<li class="content-main-information" >
+						<div class="alpha"></div>
+						<div class="alpha"></div>
+						<div class="alpha"></div>
+						<div class="alpha"></div>
+						<div class="alpha"></div>
+						<div class="alpha"></div>
+						<div class="alpha"></div>
+						<div class="alpha"></div>
+						<div class="alpha"></div>
+						
+					</li>
+					<li class="content-main-information">bbbb</li>
+					<li class="content-main-information">cccc</li>
+				</ul>
+			</main>
+
+		</div>
+	</body>
+	
+	<script>
+			
+		window.onload = function() {		
+			reSizeWebsite();
+		}
+		
+		function reSizeWebsite() {
+			$("#content-holder").css("height", $("#main-content").height() - $("#main-navigation").height());
+		}
+
+	</script>
+	
+</html>
