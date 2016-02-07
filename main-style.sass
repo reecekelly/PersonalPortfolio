@@ -1,0 +1,244 @@
+$min-width : 319px
+$max-width : 750px
+$min-height : 319px
+$header-height : 50px
+$min-body : $min-height - $header-height
+
+$mobile-size : 389px
+$tablet-size : 549px
+
+$charcoal-hex : #36454f
+$charcoal : 54, 69, 79
+$ivory-hex : #fffff0
+$ivory : 255, 255, 240
+
+$SkillsGreat : ("../IMAGES/HTML5.png", "../IMAGES/CSS3.png", "../IMAGES/JS.png", "../IMAGES/SASS.png", "../IMAGES/R.png")
+$SkillsGood : ("../IMAGES/PHP.png", "../IMAGES/MYSQL.png", "../IMAGES/JAVA.png", "../IMAGES/MONGODB.png")
+
+=expanding-div()
+	display: block
+	overflow: hidden
+	height: 1%	
+
+=centre-horizontally()
+	position: relative
+	left: 50%
+	transform: translateX(-50%)	
+
+=centre-vertically()
+	position: relative
+	top: 50%
+	transform: translateY(-50%)
+	
+=border-radius($curve-amount)
+	-webkit-border-radius:	$curve-amount
+	-moz-border-radius:		$curve-amount
+	-ms-border-radius:		$curve-amount
+	-o-border-radius:		$curve-amount
+	border-radius:			$curve-amount	
+	
+=box-shadow($position, $color)
+	-webkit-box-shadow:	$position $color
+	-moz-box-shadow:	$position $color
+	-ms-box-shadow:		$position $color
+	-o-box-shadow:		$position $color
+	box-shadow:			$position $color
+
+=equal-square($width)
+	width : $width
+	height : 0
+	padding-bottom : 50%	
+	
+*
+	margin: 0 auto
+	padding: 0
+
+img 
+	border: none
+	font-style: italic
+	text-align: center
+	vertical-align: middle
+	
+html
+	min-width: $min-width
+	min-height: $min-height
+	width: 100vw
+	height: 100vh
+	background-color: $ivory-hex
+	cursor: default	
+	
+body
+	min-width: $min-width
+	max-width: $max-width
+	min-height: $min-height	
+	background: url(../IMAGES/PortFoli_2.png) no-repeat center bottom local
+	background-size: auto 100%
+	width: 100vw
+	height: 100vh
+	
+#main-header
+	position: fixed
+	top: 0px
+	left: 0px
+	width: 100%
+	min-width: $min-width
+	height: 50px
+	background-color: $charcoal-hex
+	
+	@media screen and (max-width: $mobile-size)
+		box-shadow: none
+	
+#main-nav
+	display: inline-block
+	+centre-horizontally()
+	height: 50px
+	
+	img
+		float: left
+		width: 50px
+		height: 50px
+		+border-radius(50%)
+		margin-right: 15px
+	
+.main-nav-button	
+	float: left
+	text-align: center
+	height: 50px
+	line-height: 50px
+	font-size: 100%
+	color: $ivory-hex
+	text-transform: capitalize
+	padding-left: 15px
+	padding-right: 15px
+	border-left: 2px solid $ivory-hex
+	
+	&:first-child 
+		border-left: 0px	
+	
+	&:last-child 
+		border-right: 0px
+		
+	@media screen and (max-width: $mobile-size)
+		font-size: 90%
+
+#main-main
+	position: fixed
+	top: 50px
+	width: 100%
+	margin: 0 auto
+	min-width: $min-width
+	max-width: $max-width
+	min-height: $min-body
+
+.content-main-information
+	word-wrap: break-word
+	color: $ivory-hex
+	background-color: rgba($charcoal-hex,0.7)
+
+	&:nth-child(n+2) 
+		display: none
+		
+	& p
+		padding: 15px
+		text-align: left
+		
+		//&:first-of-type::first-letter 
+			//float: left
+			//width: .7em
+			//font-size: 4em
+			//line-height: 83%
+	
+.space
+	+centre-vertically()
+	
+.nospace
+	overflow-y: scroll
+	-webkit-overflow-scrolling: touch	
+
+#project-container	
+	width: 100%
+	+expanding-div()
+	padding: 15px
+
+	.project-holder
+		+expanding-div()
+	
+#skills-container
+	+expanding-div()
+	padding: 15px
+
+	.skills-section
+		//width: 100%
+		+expanding-div()
+		list-style-type: none
+		
+		.skills-definition
+			width: 100%
+			height: 50px
+			text-align: center
+			line-height: 50px
+			font-size: 150%
+			text-transform: capitalize
+		
+		.skills-box
+			float: left
+			width: 25%
+			+expanding-div()
+			
+			@media screen and (max-width: $mobile-size)
+				width: 50%
+				
+			@media screen and (min-device-width : ($mobile-size+1)) and (max-device-width : $tablet-size)
+				width: 33%
+		
+			& img
+				//+equal-square(100%)
+				width: 100%
+				-webkit-filter: grayscale(1)
+			
+				&:hover
+					-webkit-filter: grayscale(0)
+		 
+			& figcaption
+				height: 25px
+				text-align: center
+				line-height: 25px
+				font-size: 100%
+				text-transform: uppercase				
+		 
+		&:first-child
+			@for $i from 1 through length($SkillsGreat)
+				.skills-box:nth-child(#{$i+1}) img
+					background : url(#{nth($SkillsGreat, $i)}) no-repeat center center
+					background-size : 90% auto
+					
+		&:last-child
+			@for $i from 1 through length($SkillsGood)
+				.skills-box:nth-child(#{$i+1}) img
+					background : url(#{nth($SkillsGood, $i)}) no-repeat center center
+					background-size : 90% auto
+		
+	@media screen and (max-width: $mobile-size) 
+		padding-left: 0px
+		padding-right: 0px
+		
+		.skills-columns 
+			float: clear
+			width: 100%
+				
+			&:first-child
+				margin-bottom: 15px
+	
+::-webkit-scrollbar
+	width: 12px
+ 
+/* Track */
+::-webkit-scrollbar-track 
+	+box-shadow(inset 0 0 6px, rgba($charcoal-hex,0.3))
+ 
+/* Handle */
+::-webkit-scrollbar-thumb 
+	background: rgba($ivory-hex,0.8)
+
+::-webkit-scrollbar-thumb:window-inactive 
+	background: rgba($ivory-hex,0.4)

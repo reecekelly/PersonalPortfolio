@@ -1,0 +1,32 @@
+CACHE MANIFEST
+
+# 01:v1
+
+CACHE:
+#html file
+index.html
+
+#CSS file
+CSS/main-style-2.css
+
+#js
+JS/jquery-1.8.3.min.js
+
+#Images files
+IMAGES/CSS3.png
+IMAGES/HTML5.png
+IMAGES/JAVA.png
+IMAGES/JS.png
+IMAGES/MYSQL.png
+IMAGES/PHP.png
+IMAGES/PortFoli_2.png
+IMAGES/RK.png
+IMAGES/rk_icon.ico
+IMAGES/SASS.png
+IMAGES/R.png
+IMAGES/MONGODB.png
+
+FALLBACK:
+
+NETWORK:
+*

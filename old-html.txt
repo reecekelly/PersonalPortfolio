@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html manifest="AppCache.appcache">
+<html>
 
 	<head>
 		<title>Reece Kelly - Personal Portfolio</title>
@@ -39,70 +39,47 @@
 			</div>
 					
 			<div class="content-main-information">
-				<div id="project-container">
-					<div class="project-holder">
-						<h3></h3>
-						<img src=""></img>
-						<figcaption></figcaption>
-					</div>
-				</div>
+				<p>
+					bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb				
+				</p>			
 			</div>
 				
 			<div class="content-main-information">
 				<div id="skills-container">
-
-					<div class="skills-section">
+					<!--
+					<div class="skills-columns">
+						<div class="skills">
+							<image alt="">
+							<p>
+								bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+							</p>
+						</div>
+						<div class="skills"></div>
+					</div>
+									
+					<div class="skills-columns">
+						<div class="skills"></div>
+						<div class="skills"></div>
+						<div class="skills"></div>
+						<div class="skills"></div>
+						<div class="skills"></div>
+						<div class="skills"></div>
+						<div class="skills"></div>
+					</div>
+				-->
+					<ul id="GREAT" class="skills-section">
 						<div class="skills-definition">great</div>
-						
-						<figure class="skills-box" title="HTML5">
-							<img src="" alt="HTML5 Logo">
-							<figcaption>html5</figcaption>
-						</figure>
-						
-						<figure class="skills-box" title="CSS3">
-							<img src="" alt="Css3 Logo">
-							<figcaption>css3</figcaption>
-						</figure>
-						
-						<figure class="skills-box" title="Javascript">
-							<img src="" alt="Javascript Logo">
-							<figcaption>javascript</figcaption>
-						</figure>
-						
-						<figure class="skills-box" title="SASS/SCSS">
-							<img src="" alt="SASS Logo">
-							<figcaption>sass</figcaption>
-						</figure>
-						
-						<figure class="skills-box" title="R">
-							<img src="" alt="R Logo">
-							<figcaption>R</figcaption>
-						</figure>
-					</div>
+						<li class="skills-box" title="HTML5"></li>
+						<li class="skills-box" title="CSS3"></li>
+						<li class="skills-box" title="Javascript"></li>
+						<li class="skills-box" title="SASS/SCSS"></li>
+					</ul>
 					
-					<div class="skills-section">
+					<ul id="GOOD" class="skills-section">
 						<div class="skills-definition">good</div>
-						
-						<figure class="skills-box" title="php">
-							<img src="" alt="php logo">
-							<figcaption>php</figcaption>
-						</figure>
-						
-						<figure class="skills-box" title="mysql">
-							<img src="" alt="mysql logo">
-							<figcaption>mysql</figcaption>
-						</figure>	
-						
-						<figure class="skills-box" title="java">
-							<img src="" alt="java logo">
-							<figcaption>java</figcaption>
-						</figure>							
-
-						<figure class="skills-box" title="mongodb">
-							<img src="" alt="mongodb logo">
-							<figcaption>mongoDB</figcaption>
-						</figure>							
-					</div>
+						<li class="skills-box"></li>
+						<li class="skills-box"></li>					
+					</ul>
 					
 				</div>		
 			</div>
@@ -126,9 +103,7 @@
 			//console.log("	Main-Main height :"+$("#main-main").height());
 			mainBodyHeight = $("#main-main").height();
 			//console.log("");
-			var skillsdi = $(".skills-box img").width();
-			$(".skills-box img").css({"height":skillsdi,"line-height":skillsdi});
-
+			
 			for(var i=1;i<=3;i++) {
 			
 				if($(".content-main-information:nth-child("+i+")").height() >= mainBodyHeight) {

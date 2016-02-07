@@ -1,0 +1,208 @@
+/* -- Dots out tex when text reachs limit
+#FFFFF0-space: nowrap
+overflow: hidden
+text-overflow: ellipsis
+ */
+
+* {
+	margin: 0 auto;
+	padding: 0px;
+}
+			
+ul {
+	list-style-type: none;
+}
+
+html {
+	background: url(../IMAGES/PortFoli_2.png) no-repeat center bottom local #fffff0; 
+	background-size: auto 100%;
+	min-width: 320px;
+	min-height: 480px;
+}
+
+html, body, #main-content  {
+	width: 100vw;
+	height: 100vh;
+	min-width: 320px;
+	min-height: 480px;
+}
+
+#main-content {
+	max-width: 750px;
+}
+
+#header-bar {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: #36454f;
+	/*
+	background: 
+				url(corner-bracket-left.png) no-repeat top left fixed,
+				url(corner-bracket-right.png) no-repeat top right fixed; 
+	background-size: auto 50px;	
+	*/
+}
+
+header {
+	width: 100%;
+	height: 50px;
+	background-color: #36454f;
+}
+
+#main-navigation {
+	display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+	height: 50px;
+}
+
+#main-logo {
+	float: left;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #FFFFF0;
+}
+
+.main-navigation-button {
+	float: left;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	font-size: 100%;
+	color: #FFFFF0;
+	text-transform: capitalize;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-left: 2px solid #FFFFF0;
+	cursor: default;
+}
+
+.main-navigation-button:nth-child(2) {
+	border-left: 0px;	
+}
+
+.main-navigation-button:last-child {
+	border-right: 0px;
+}
+
+#content-holder , #content-main-holder {
+	width: 100%;
+	min-width: 320px;
+	min-height: 50px;
+	color: #36454f;
+	z-index: 0;
+}
+
+#content-main-holder {
+	background-color: black;
+	cursor: default;
+}
+/*rgba(255, 255, 240, 0.8)*/
+/*
+#content-main-holder {
+	display: inline-block;
+    position: relative;	
+	top:50%;
+	transform: translateY(-50%);
+	width: 100%;
+	min-width: 320px;
+	min-height: 60px;
+	background-color: rgba(0,0,0,0.7);
+}
+*/
+
+.content-main-holder-space {
+	/*display: inline-block;*/
+    position: relative;	
+	top:50%;
+	transform: translateY(-50%);
+	min-height: 60px;
+	max-height: none;
+}
+
+.content-main-holder-nospace {
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+.content-main-information {
+	padding: 15px;
+	word-wrap: break-word;
+	color: #36454f;
+	display: block;
+	overflow: hidden;
+	height: 1%;
+}
+
+.content-main-information:nth-child(n+2) {
+	display: none;
+}
+
+.firstcharacter { 
+	text-align: left;
+	color: #903; 
+	font-size: 60px; 
+	line-height: 60px; 
+	padding-right: 8px;  
+	font-family: Georgia; 
+}
+
+.skills-container {
+	width: 30%;
+	min-height: 50px;
+}
+
+.skills-container:first-child {
+	float: left;
+}
+
+.skills-container:last-child {
+	float: right;
+}
+
+@media screen and (max-width: 480px) {
+	.skills-container {
+		float: none;
+		width: 100%;
+	}
+}
+
+.skills-box {
+	width: 100%;
+	min-height: 50px;
+	margin-bottom: 15px;
+	background-color: green;
+}
+
+.skills-box:last-child {
+	margin-bottom: 0px;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(#36454f,0.3); 
+    /*-webkit-border-radius: 10px;
+    border-radius: 10px;*/
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    /*-webkit-border-radius: 10px;
+    border-radius: 10px;*/
+    background: rgba(255,255,255,0.8); 
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);*/
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255, 255, 240,0.4); 
+}

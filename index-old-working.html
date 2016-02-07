@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		
+		<meta name="viewport" content="width=device-width" />	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />	
+		
+		<link rel="stylesheet" type="text/css" href="main-style.css">
+		
+		<script src="jquery-1.8.3.min.js" type="text/javascript"></script>
+		
+	</head>
+	
+	<body onresize="reSizeWebsite()">
+		<div id="main-content">
+			
+			<div id="header-bar"></div>
+			
+			<header>
+				<ul id="main-navigation">
+					<div id="main-logo"></div>
+					<li class="main-navigation-button">infomation</li>
+					<li class="main-navigation-button">projects</li>
+					<li class="main-navigation-button">skills</li>
+				</ul>
+			</header>
+			
+			<main id="content-holder">
+				<ul id="content-main-holder">
+					<li class="content-main-information">
+						<p>
+							aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+						</p>
+					</li>
+					<li class="content-main-information">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</li>
+					<li class="content-main-information">cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc</li>
+				</ul>
+			</main>
+
+		</div>
+	</body>
+	
+	<script type="text/javascript">
+			
+		window.onload = function() {		
+			reSizeWebsite();
+		}
+		
+		function reSizeWebsite() {
+			$("#content-holder").css("height", $("#main-content").height() - $("#main-navigation").height());
+
+			if($("#content-holder").height() <= $("#content-main-holder").height()) {
+				$( "#content-main-holder" ).css("max-height",$( "#content-holder" ).height()).addClass( "content-main-holder-nospace" ).removeClass( "content-main-holder-space" );
+				console.log("mobile");
+			} else {
+				$( "#content-main-holder" ).css("max-height",$( "#content-holder" ).height()).addClass( "content-main-holder-space" ).removeClass( "content-main-holder-nospace" );
+				console.log("desktop");
+			}
+		}
+		
+		$("#main-navigation .main-navigation-button:nth-child(2)").on( "click", function() {
+			$(".content-main-information:nth-child(1)").css("display",'block');
+			$(".content-main-information:nth-child(2)").css("display",'none');
+			$(".content-main-information:nth-child(3)").css("display",'none');
+		});
+		
+		$("#main-navigation .main-navigation-button:nth-child(3)").on( "click", function() {
+			$(".content-main-information:nth-child(1)").css("display",'none');
+			$(".content-main-information:nth-child(2)").css("display",'block');
+			$(".content-main-information:nth-child(3)").css("display",'none');
+		});
+		
+		$("#main-navigation .main-navigation-button:nth-child(4)").on( "click", function() {
+			$(".content-main-information:nth-child(1)").css("display",'none');
+			$(".content-main-information:nth-child(2)").css("display",'none');
+			$(".content-main-information:nth-child(3)").css("display",'block');
+		});
+
+	</script>
+	
+</html>
