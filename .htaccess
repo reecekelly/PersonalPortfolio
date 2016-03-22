@@ -1,7 +1,3 @@
-RewriteBase /
-
-AddType text/cache-manifest .appcache
-
-<IfModule mod_headers.c>
-    Header set Access-Control-Allow-Origin "*"
-</IfModule>
+# Do not remove this line, otherwise mod_rewrite rules will stop working
+RewriteBase /
+

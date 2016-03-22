@@ -12,8 +12,14 @@ $charcoal : 54, 69, 79
 $ivory-hex : #fffff0
 $ivory : 255, 255, 240
 
-$SkillsGreat : ("../IMAGES/HTML5.png", "../IMAGES/CSS3.png", "../IMAGES/JS.png", "../IMAGES/SASS.png", "../IMAGES/R.png")
-$SkillsGood : ("../IMAGES/PHP.png", "../IMAGES/MYSQL.png", "../IMAGES/JAVA.png", "../IMAGES/MONGODB.png")
+$ProjectsHomepage : ("../IMAGES/PROJECTS/year-1_homepage.png", "../IMAGES/PROJECTS/app-1-homepage.png", "../IMAGES/PROJECTS/app-2-homepage.png")
+$SkillsGreat : ("../IMAGES/SKILLS/HTML5.png", "../IMAGES/SKILLS/CSS3.png", "../IMAGES/SKILLS/JS.png", "../IMAGES/SKILLS/SASS.png", "../IMAGES/SKILLS/JQUERY.png", "../IMAGES/SKILLS/JQUERYMOBILE.png", "../IMAGES/SKILLS/R.png")
+$SkillsGood : ("../IMAGES/SKILLS/PHP.png", "../IMAGES/SKILLS/MYSQL.png", "../IMAGES/SKILLS/AJAX.png", "../IMAGES/SKILLS/JAVA.png", "../IMAGES/SKILLS/MONGODB.png")
+
+$SkillsGalacticBattle : ("../IMAGES/SKILLS/HTML5.png", "../IMAGES/SKILLS/CSS3.png", "../IMAGES/SKILLS/JS.png")
+$SkillsAssignment1 : ("../IMAGES/SKILLS/HTML5.png", "../IMAGES/SKILLS/CSS3.png", "../IMAGES/SKILLS/JS.png", "../IMAGES/SKILLS/SASS.png", "../IMAGES/SKILLS/JQUERY.png", "../IMAGES/SKILLS/JQUERYMOBILE.png")
+$SkillsAssignment2 : ("../IMAGES/SKILLS/HTML5.png", "../IMAGES/SKILLS/CSS3.png", "../IMAGES/SKILLS/JS.png", "../IMAGES/SKILLS/SASS.png", "../IMAGES/SKILLS/JQUERY.png", "../IMAGES/SKILLS/JQUERYMOBILE.png", "../IMAGES/SKILLS/PHP.png", "../IMAGES/SKILLS/MYSQL.png", "../IMAGES/SKILLS/AJAX.png")
+$ProjectSkills : ($SkillsGalacticBattle, $SkillsAssignment1, $SkillsAssignment2)
 
 =expanding-div()
 	display: block
@@ -44,6 +50,34 @@ $SkillsGood : ("../IMAGES/PHP.png", "../IMAGES/MYSQL.png", "../IMAGES/JAVA.png",
 	-o-box-shadow:		$position $color
 	box-shadow:			$position $color
 
+=border-top-left-radius($curve-amount-top-left)
+	-webkit-border-top-left-radius:	$curve-amount-top-left
+	-moz-border-top-left-radius:	$curve-amount-top-left
+	-ms-border-top-left-radius:		$curve-amount-top-left
+	-o-border-top-left-radius:		$curve-amount-top-left
+	border-top-left-radius:			$curve-amount-top-left
+	
+=border-top-right-radius($curve-amount-top-right)
+	-webkit-border-top-right-radius:	$curve-amount-top-right
+	-moz-border-top-right-radius:		$curve-amount-top-right
+	-ms-border-top-right-radius:		$curve-amount-top-right
+	-o-border-top-right-radius:			$curve-amount-top-right
+	border-top-right-radius:			$curve-amount-top-right
+	
+=border-bottom-left-radius($curve-amount-bottom-left)
+	-webkit-border-bottom-left-radius:	$curve-amount-bottom-left
+	-moz-border-bottom-left-radius:		$curve-amount-bottom-left
+	-ms-border-bottom-left-radius:		$curve-amount-bottom-left
+	-o-border-bottom-left-radius:		$curve-amount-bottom-left
+	border-bottom-left-radius:			$curve-amount-bottom-left
+	
+=border-bottom-right-radius($curve-amount-bottom-right)
+	-webkit-border-bottom-right-radius:	$curve-amount-bottom-right
+	-moz-border-bottom-right-radius:	$curve-amount-bottom-right
+	-ms-border-bottom-right-radius:		$curve-amount-bottom-right
+	-o-border-bottom-right-radius:		$curve-amount-bottom-right
+	border-bottom-right-radius:			$curve-amount-bottom-right	
+	
 =equal-square($width)
 	width : $width
 	height : 0
@@ -52,7 +86,10 @@ $SkillsGood : ("../IMAGES/PHP.png", "../IMAGES/MYSQL.png", "../IMAGES/JAVA.png",
 *
 	margin: 0 auto
 	padding: 0
-
+	
+li
+	list-style-type: none
+		
 img 
 	border: none
 	font-style: italic
@@ -141,12 +178,6 @@ body
 	& p
 		padding: 15px
 		text-align: left
-		
-		//&:first-of-type::first-letter 
-			//float: left
-			//width: .7em
-			//font-size: 4em
-			//line-height: 83%
 	
 .space
 	+centre-vertically()
@@ -156,12 +187,66 @@ body
 	-webkit-overflow-scrolling: touch	
 
 #project-container	
-	width: 100%
 	+expanding-div()
 	padding: 15px
 
 	.project-holder
+		width: 100%
+		margin-bottom: 15px
 		+expanding-div()
+		min-height: 15px
+	
+		&:last-child
+			margin-bottom: 0px
+			
+		h3
+			height: 25px
+			line-height: 25px
+			text-align: center
+			text-transform: capitalize
+			background-color: rgba($charcoal-hex,0.7)
+		
+		@for $i from 1 through length($ProjectsHomepage)
+			&:nth-child(#{$i}) .project-main-image
+				background: url(#{nth($ProjectsHomepage, $i)}) no-repeat center center
+				overflow: hidden
+				width: 100%
+				background-size: auto 100%
+				margin-top: 5px
+				margin-bottom: 5px
+				background-color: black
+	
+		.project-skills-holder
+			display: inline-block
+			margin: 0 auto
+			+centre-horizontally()
+		
+			.project-skills
+				float: left
+				width: 25px
+				height: 25px
+				-webkit-filter: grayscale(1)
+			
+				&:hover
+					-webkit-filter: grayscale(0)
+				
+				&:nth-child(n+2)
+					margin-left: 5px
+		
+		figcaption
+			padding: 15px
+			margin-top: 5px
+			background-color: rgba($charcoal-hex,0.7)
+						
+	@media screen and (max-width: $mobile-size)
+		padding-left: 0px
+		padding-right: 0px
+	
+@for $i from 1 through length($ProjectSkills)	
+	@for $j from 1 through length(nth($ProjectSkills, $i))
+		#project-container .project-holder:nth-child(#{$i}) .project-skills-holder .project-skills:nth-child(#{$j})
+			background : url(#{nth(nth($ProjectSkills, $i), $j)}) no-repeat center center
+			background-size : 90% auto
 	
 #skills-container
 	+expanding-div()
@@ -179,6 +264,7 @@ body
 			line-height: 50px
 			font-size: 150%
 			text-transform: capitalize
+			background-color: rgba($charcoal-hex,0.7)
 		
 		.skills-box
 			float: left
@@ -191,7 +277,7 @@ body
 			@media screen and (min-device-width : ($mobile-size+1)) and (max-device-width : $tablet-size)
 				width: 33%
 		
-			& img
+			& .skills-image
 				//+equal-square(100%)
 				width: 100%
 				-webkit-filter: grayscale(1)
@@ -207,14 +293,16 @@ body
 				text-transform: uppercase				
 		 
 		&:first-child
+			margin-bottom: 15px
+			
 			@for $i from 1 through length($SkillsGreat)
-				.skills-box:nth-child(#{$i+1}) img
+				.skills-box:nth-child(#{$i+1}) .skills-image
 					background : url(#{nth($SkillsGreat, $i)}) no-repeat center center
 					background-size : 90% auto
 					
 		&:last-child
 			@for $i from 1 through length($SkillsGood)
-				.skills-box:nth-child(#{$i+1}) img
+				.skills-box:nth-child(#{$i+1}) .skills-image
 					background : url(#{nth($SkillsGood, $i)}) no-repeat center center
 					background-size : 90% auto
 		

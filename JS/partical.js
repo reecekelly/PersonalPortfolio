@@ -76,6 +76,7 @@ window.onload = function(){
 				particles[i] = new particle();
 			}
 		}
+	
 	}
 	
 	setInterval(draw, 33);

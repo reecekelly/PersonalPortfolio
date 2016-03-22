@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 
-<html manifest="AppCache.appcache">
-
-	<head>
+<!--Offline Caching Enabled-->
+<html>
+	<!--Stores Meta Data and External CSS and Javascript File Links-->
+	<head lang="en">
 		<title>Reece Kelly - Personal Portfolio</title>
 
-		<meta charset="utf-8">	
+		<meta charset="utf-8">
+		<!--Icon Image-->
 		<link rel="icon" type="image/png" href="IMAGES/rk_icon.ico">
+		<!--Meta Data incharge of Mobile Screen Scaling-->
 		<meta name="viewport" content="width=device-width" />	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 		<meta name="viewport" content="user-scalable=no, width=device-width" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />	
-		
+		<!--External CSS Files-->
 		<link rel="stylesheet" type="text/css" href="CSS/main-style-2.css">
-		
+		<!--External Javascript Files-->
 		<script src="JS/jquery-1.8.3.min.js" type="text/javascript"></script>
+		<script src="JS/function-storage.js" type="text/javascript"></script>
 		
 	</head>
 	
 	<body onresize="reSizeWebsite()">
+		<!--A Fixed Header for Storing Navigation-->
 		<header id="main-header">
-			
 			<nav id="main-nav">
 				<img src="IMAGES/RK.png" alt="Home">
 				<div class="main-nav-button">infomation</div>
@@ -28,85 +32,136 @@
 				<div class="main-nav-button">skills</div>
 			</nav>
 		</header>
-		
-		
+		<!--A Fixed Main for Storing the Pages Information-->
 		<main id="main-main"> 
-		
+			<!--Information Page-->
 			<div class="content-main-information">
 				<p>
-					aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab
+					Hi my name is Reece Kelly and I'm a software developer located in the United Kingdom. Feel free to have a look around my portfolio site as well as downloading my up-to-date CV. This site is divided into three components, a short bio, projects I’ve worked on and a couple of lists that are comprised of programming languages that I use on a regular bases as well as experienced. 
 				</p>
 			</div>
-					
+			<!--Projects Page-->			
 			<div class="content-main-information">
 				<div id="project-container">
-					<div class="project-holder">
-						<h3></h3>
-						<img src=""></img>
-						<figcaption></figcaption>
-					</div>
+				
+					<figure class="project-holder">
+						<h3>galactic battlestations</h3>
+						<div class="project-main-image" title="galactic battlestations homepage"></div>
+						<ul class="project-skills-holder">
+							<li class="project-skills" title="HTML5"></li>
+							<li class="project-skills" title="CSS3"></li>
+							<li class="project-skills" title="Javascript"></li>
+						</ul>
+						<figcaption>This was a website that I co-designed and created within a group whilst at university, it was designed to advertise a game called Galactic Battlestations that was being developed at the university. It’s main intention was to advertise it’s key features as well as the social media accounts that are attached to it.  </figcaption>
+					</figure>
+					
+					<figure class="project-holder">
+						<h3>assignment 1</h3>
+						<div class="project-main-image" title="galactic battlestations"></div>
+						<ul class="project-skills-holder">
+							<li class="project-skills" title="HTML5"></li>
+							<li class="project-skills" title="CSS3"></li>
+							<li class="project-skills" title="Javascript"></li>
+							<li class="project-skills" title="SASS"></li>
+							<li class="project-skills" title="JQuery"></li>
+							<li class="project-skills" title="JQuery Mobile"></li>
+						</ul>
+						<figcaption>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</figcaption>
+					</figure>
+					
+					<figure class="project-holder">
+						<h3>assignment 2</h3>
+						<div class="project-main-image" title="galactic battlestations"></div>
+						<ul class="project-skills-holder">
+							<li class="project-skills" title="HTML5"></li>
+							<li class="project-skills" title="CSS3"></li>
+							<li class="project-skills" title="Javascript"></li>
+							<li class="project-skills" title="SASS"></li>
+							<li class="project-skills" title="JQuery"></li>
+							<li class="project-skills" title="JQuery Mobile"></li>
+							<li class="project-skills" title="PHP"></li>
+							<li class="project-skills" title="mySQL"></li>
+							<li class="project-skills" title="Ajax"></li>
+						</ul>
+						<figcaption>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</figcaption>
+					</figure>
+					
 				</div>
 			</div>
-				
+			<!--Skills Page-->
 			<div class="content-main-information">
 				<div id="skills-container">
 
 					<div class="skills-section">
-						<div class="skills-definition">great</div>
+						<h3 class="skills-definition">great</h3>
 						
 						<figure class="skills-box" title="HTML5">
-							<img src="" alt="HTML5 Logo">
+							<div class="skills-image" title="HTML5 Logo"></div>
 							<figcaption>html5</figcaption>
 						</figure>
 						
 						<figure class="skills-box" title="CSS3">
-							<img src="" alt="Css3 Logo">
+							<div class="skills-image" title="Css3 Logo"></div>
 							<figcaption>css3</figcaption>
 						</figure>
 						
 						<figure class="skills-box" title="Javascript">
-							<img src="" alt="Javascript Logo">
+							<div class="skills-image" title="Javascript Logo"></div>
 							<figcaption>javascript</figcaption>
 						</figure>
 						
 						<figure class="skills-box" title="SASS/SCSS">
-							<img src="" alt="SASS Logo">
-							<figcaption>sass</figcaption>
+							<div class="skills-image" title="SASS Logo"></div>
+							<figcaption>sass/scss</figcaption>
+						</figure>
+						
+						<figure class="skills-box" title="JQuery">
+							<div class="skills-image" title="JQuery Logo"></div>
+							<figcaption>jquery</figcaption>
+						</figure>
+						
+						<figure class="skills-box" title="JQuery Mobile">
+							<div class="skills-image" title="JQuery Mobile Logo"></div>
+							<figcaption>jquery Mobile</figcaption>
 						</figure>
 						
 						<figure class="skills-box" title="R">
-							<img src="" alt="R Logo">
+							<div class="skills-image" title="R Logo"></div>
 							<figcaption>R</figcaption>
 						</figure>
 					</div>
 					
 					<div class="skills-section">
-						<div class="skills-definition">good</div>
+						<h3 class="skills-definition">good</h3>
 						
 						<figure class="skills-box" title="php">
-							<img src="" alt="php logo">
+							<div class="skills-image" title="php logo"></div>
 							<figcaption>php</figcaption>
 						</figure>
 						
 						<figure class="skills-box" title="mysql">
-							<img src="" alt="mysql logo">
+							<div class="skills-image" title="mysql logo"></div>
 							<figcaption>mysql</figcaption>
 						</figure>	
 						
-						<figure class="skills-box" title="java">
-							<img src="" alt="java logo">
-							<figcaption>java</figcaption>
+						<figure class="skills-box" title="ajax">
+							<div class="skills-image" title="ajax logo"></div>
+							<figcaption>ajax</figcaption>
 						</figure>							
 
+						<figure class="skills-box" title="java">
+							<div class="skills-image" title="java logo"></div>
+							<figcaption>java</figcaption>
+						</figure>	
+
 						<figure class="skills-box" title="mongodb">
-							<img src="" alt="mongodb logo">
-							<figcaption>mongoDB</figcaption>
-						</figure>							
+							<div class="skills-image" title="mongodb logo"></div>
+							<figcaption>mongodb</figcaption>
+						</figure>
 					</div>
 					
 				</div>		
 			</div>
-			
 		</main>
 	</body>
 	
@@ -115,42 +170,6 @@
 			var currentpage = 1;
 			reSizeWebsite();
 		}	
-	
-		function reSizeWebsite() {
-
-			var mainBodyHeight = $("body").height() - $("#main-header").height();
-
-			$("#main-main").css("height", mainBodyHeight);
-			//console.log("Default Stats");
-			//console.log("	Window Height: "+$("body").height());
-			//console.log("	Main-Main height :"+$("#main-main").height());
-			mainBodyHeight = $("#main-main").height();
-			//console.log("");
-			var skillsdi = $(".skills-box img").width();
-			$(".skills-box img").css({"height":skillsdi,"line-height":skillsdi});
-
-			for(var i=1;i<=3;i++) {
-			
-				if($(".content-main-information:nth-child("+i+")").height() >= mainBodyHeight) {
-					//console.log("	Doesn't fit");
-					$(".content-main-information:nth-child("+i+")").css({"max-height":mainBodyHeight}).addClass("nospace").removeClass("space");
-					//alert("no space");
-					
-				} else {
-					//console.log("	Does fit");
-					$(".content-main-information:nth-child("+i+")").css({"max-height":"none"}).addClass("space").removeClass("nospace");
-					
-					if($(".content-main-information:nth-child("+i+")").height() >= $("#main-main").height()) {
-						console.log("alert");
-						//$(".content-main-information:nth-child("+i+")").css({"height":$("#main-main").height()});
-						$(".content-main-information:nth-child("+i+")").css({"max-height":$("#main-main").height()}).addClass("nospace").removeClass("space");
-					}
-					//alert("space");
-				}
-			
-			}
-			
-		}
 	
 		$("#main-nav .main-nav-button:nth-child(2)").on( "click", function() {
 			$(".content-main-information:nth-child(1)").css("display",'block');
