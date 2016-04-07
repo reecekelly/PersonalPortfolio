@@ -11,15 +11,21 @@ $charcoal-hex : #36454f
 $charcoal : 54, 69, 79
 $ivory-hex : #fffff0
 $ivory : 255, 255, 240
+$burgundy-hex : #4E110F
+$burgundy : 78, 17, 15
 
-$ProjectsHomepage : ("../IMAGES/PROJECTS/year-1_homepage.png", "../IMAGES/PROJECTS/app-1-homepage.png", "../IMAGES/PROJECTS/app-2-homepage.png")
+$ProjectsHomepage : ("../IMAGES/PROJECTS/year-1_homepage.png", "../IMAGES/PROJECTS/app-1-homepage.png", "../IMAGES/PROJECTS/app-2-homepage.png", "../IMAGES/PROJECTS/spin-game-main-game.png", "../IMAGES/PROJECTS/portfolio-site-homepage.png")
 $SkillsGreat : ("../IMAGES/SKILLS/HTML5.png", "../IMAGES/SKILLS/CSS3.png", "../IMAGES/SKILLS/JS.png", "../IMAGES/SKILLS/SASS.png", "../IMAGES/SKILLS/JQUERY.png", "../IMAGES/SKILLS/JQUERYMOBILE.png", "../IMAGES/SKILLS/R.png")
-$SkillsGood : ("../IMAGES/SKILLS/PHP.png", "../IMAGES/SKILLS/MYSQL.png", "../IMAGES/SKILLS/AJAX.png", "../IMAGES/SKILLS/JAVA.png", "../IMAGES/SKILLS/MONGODB.png")
+$SkillsGood : ("../IMAGES/SKILLS/PHP.png", "../IMAGES/SKILLS/MYSQL.png", "../IMAGES/SKILLS/AJAX.png", "../IMAGES/SKILLS/JAVA.png", "../IMAGES/SKILLS/MONGODB.png", "../IMAGES/SKILLS/SCALA.png")
 
 $SkillsGalacticBattle : ("../IMAGES/SKILLS/HTML5.png", "../IMAGES/SKILLS/CSS3.png", "../IMAGES/SKILLS/JS.png")
-$SkillsAssignment1 : ("../IMAGES/SKILLS/HTML5.png", "../IMAGES/SKILLS/CSS3.png", "../IMAGES/SKILLS/JS.png", "../IMAGES/SKILLS/SASS.png", "../IMAGES/SKILLS/JQUERY.png", "../IMAGES/SKILLS/JQUERYMOBILE.png")
-$SkillsAssignment2 : ("../IMAGES/SKILLS/HTML5.png", "../IMAGES/SKILLS/CSS3.png", "../IMAGES/SKILLS/JS.png", "../IMAGES/SKILLS/SASS.png", "../IMAGES/SKILLS/JQUERY.png", "../IMAGES/SKILLS/JQUERYMOBILE.png", "../IMAGES/SKILLS/PHP.png", "../IMAGES/SKILLS/MYSQL.png", "../IMAGES/SKILLS/AJAX.png")
-$ProjectSkills : ($SkillsGalacticBattle, $SkillsAssignment1, $SkillsAssignment2)
+$SkillsUniversityGloucestershire : ("../IMAGES/SKILLS/HTML5.png", "../IMAGES/SKILLS/CSS3.png", "../IMAGES/SKILLS/JS.png", "../IMAGES/SKILLS/SASS.png", "../IMAGES/SKILLS/JQUERY.png", "../IMAGES/SKILLS/JQUERYMOBILE.png")
+$SkillsCheltenhamFinder : ("../IMAGES/SKILLS/HTML5.png", "../IMAGES/SKILLS/CSS3.png", "../IMAGES/SKILLS/JS.png", "../IMAGES/SKILLS/SASS.png", "../IMAGES/SKILLS/JQUERY.png", "../IMAGES/SKILLS/JQUERYMOBILE.png", "../IMAGES/SKILLS/PHP.png", "../IMAGES/SKILLS/MYSQL.png", "../IMAGES/SKILLS/AJAX.png")
+$SkillsSpinGame : ("../IMAGES/SKILLS/HTML5.png", "../IMAGES/SKILLS/CSS3.png", "../IMAGES/SKILLS/JS.png", "../IMAGES/SKILLS/SASS.png", "../IMAGES/SKILLS/JQUERY.png")
+$SkillsPortfolioSite : ("../IMAGES/SKILLS/HTML5.png", "../IMAGES/SKILLS/CSS3.png", "../IMAGES/SKILLS/JS.png", "../IMAGES/SKILLS/SASS.png", "../IMAGES/SKILLS/JQUERY.png")
+
+
+$ProjectSkills : ($SkillsGalacticBattle, $SkillsUniversityGloucestershire, $SkillsCheltenhamFinder, $SkillsSpinGame, $SkillsPortfolioSite)
 
 =expanding-div()
 	display: block
@@ -86,6 +92,7 @@ $ProjectSkills : ($SkillsGalacticBattle, $SkillsAssignment1, $SkillsAssignment2)
 *
 	margin: 0 auto
 	padding: 0
+	font-family: "Trebuchet MS", Helvetica, sans-serif
 	
 li
 	list-style-type: none
@@ -109,9 +116,13 @@ body
 	max-width: $max-width
 	min-height: $min-height	
 	background: url(../IMAGES/PortFoli_2.png) no-repeat center bottom local
+	background-attachment: fixed
 	background-size: auto 100%
 	width: 100vw
 	height: 100vh
+	
+h3
+	text-shadow: 1px 1px $burgundy-hex
 	
 #main-header
 	position: fixed
@@ -132,10 +143,11 @@ body
 	
 	img
 		float: left
-		width: 50px
-		height: 50px
+		width: 40px
+		height: 40px
 		+border-radius(50%)
 		margin-right: 15px
+		margin-top: 5px
 	
 .main-nav-button	
 	float: left
@@ -148,12 +160,17 @@ body
 	padding-left: 15px
 	padding-right: 15px
 	border-left: 2px solid $ivory-hex
+	cursor: pointer
+	cursor: hand
 	
 	&:first-child 
 		border-left: 0px	
 	
 	&:last-child 
 		border-right: 0px
+		
+	&:hover
+		background-color: $burgundy-hex
 		
 	@media screen and (max-width: $mobile-size)
 		font-size: 90%
@@ -171,14 +188,40 @@ body
 	word-wrap: break-word
 	color: $ivory-hex
 	background-color: rgba($charcoal-hex,0.7)
-
+	
+	&:first-child:before
+		float: left
+		font-size: 270%
+		height: 47px
+		margin: 10px 10px -5px 15px
+		text-transform: uppercase
+		content: "hi "
+		color: $burgundy-hex
+		text-shadow: 1px 1px $ivory-hex
+	
 	&:nth-child(n+2) 
 		display: none
 		
-	& p
+	p
+		padding-top: 15px
+		padding-right: 15px
+		padding-left: 15px
+		text-align: left
+		
+		&:last-child
+			padding-bottom: 15px
+		
+	.page-information
 		padding: 15px
 		text-align: left
-	
+		
+	.page-information
+		margin: 15px 15px 0 15px
+		background-color: rgba($burgundy-hex,0.7)
+		
+		@media screen and (max-width: $mobile-size)
+			margin: 15px 0 0 0
+		
 .space
 	+centre-vertically()
 	
@@ -204,8 +247,9 @@ body
 			line-height: 25px
 			text-align: center
 			text-transform: capitalize
-			background-color: rgba($charcoal-hex,0.7)
-		
+			background-color: rgba($charcoal-hex,0.8)
+			+expanding-div()
+			
 		@for $i from 1 through length($ProjectsHomepage)
 			&:nth-child(#{$i}) .project-main-image
 				background: url(#{nth($ProjectsHomepage, $i)}) no-repeat center center
@@ -215,6 +259,8 @@ body
 				margin-top: 5px
 				margin-bottom: 5px
 				background-color: black
+				border-top: 3px solid $burgundy-hex
+				border-bottom: 3px solid $burgundy-hex
 	
 		.project-skills-holder
 			display: inline-block
@@ -225,16 +271,12 @@ body
 				float: left
 				width: 25px
 				height: 25px
-				-webkit-filter: grayscale(1)
-			
-				&:hover
-					-webkit-filter: grayscale(0)
 				
 				&:nth-child(n+2)
 					margin-left: 5px
 		
 		figcaption
-			padding: 15px
+			min-height: 15px
 			margin-top: 5px
 			background-color: rgba($charcoal-hex,0.7)
 						
@@ -280,10 +322,10 @@ body
 			& .skills-image
 				//+equal-square(100%)
 				width: 100%
-				-webkit-filter: grayscale(1)
+				//-webkit-filter: grayscale(1)
 			
-				&:hover
-					-webkit-filter: grayscale(0)
+				//&:hover
+					//-webkit-filter: grayscale(0)
 		 
 			& figcaption
 				height: 25px
@@ -316,6 +358,23 @@ body
 				
 			&:first-child
 				margin-bottom: 15px
+	
+#main-footer
+	position: fixed
+	bottom: 20px
+	right: 20px
+	width: 50px
+	height: 50px
+	text-align: center
+	font-size: 20px
+	line-height: 50px
+	color: $ivory-hex
+	background-color: rgba($burgundy-hex,0.5)
+	border: 1px solid $ivory-hex
+	text-decoration: none
+	
+	&:hover
+		background-color: rgba($burgundy-hex,1)
 	
 ::-webkit-scrollbar
 	width: 12px

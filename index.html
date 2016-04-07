@@ -2,6 +2,7 @@
 
 <!--Offline Caching Enabled-->
 <html>
+
 	<!--Stores Meta Data and External CSS and Javascript File Links-->
 	<head lang="en">
 		<title>Reece Kelly - Personal Portfolio</title>
@@ -15,7 +16,7 @@
 		<meta name="viewport" content="user-scalable=no, width=device-width" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />	
 		<!--External CSS Files-->
-		<link rel="stylesheet" type="text/css" href="CSS/main-style-2.css">
+		<link rel="stylesheet" type="text/css" href="CSS/main-style.css">
 		<!--External Javascript Files-->
 		<script src="JS/jquery-1.8.3.min.js" type="text/javascript"></script>
 		<script src="JS/function-storage.js" type="text/javascript"></script>
@@ -23,6 +24,7 @@
 	</head>
 	
 	<body onresize="reSizeWebsite()">
+		
 		<!--A Fixed Header for Storing Navigation-->
 		<header id="main-header">
 			<nav id="main-nav">
@@ -32,32 +34,56 @@
 				<div class="main-nav-button">skills</div>
 			</nav>
 		</header>
+		
 		<!--A Fixed Main for Storing the Pages Information-->
 		<main id="main-main"> 
+			
 			<!--Information Page-->
 			<div class="content-main-information">
+				<p id="starting-word">
+					my name is Reece Kelly and I'm a software developer located in the United Kingdom. I am currently in my final year at the University of Gloucestershire studying a Computing BSc degree. Feel free to have a look around my portfolio site as well as downloading my CV.
+				</p>
+				
 				<p>
-					Hi my name is Reece Kelly and I'm a software developer located in the United Kingdom. Feel free to have a look around my portfolio site as well as downloading my up-to-date CV. This site is divided into three components, a short bio, projects I’ve worked on and a couple of lists that are comprised of programming languages that I use on a regular bases as well as experienced. 
+					My primary skills and knowledge are in website and mobile application design and development using the latest web technologies i.e. HTML5, CSS3 and AJAX. I also have extensive experience in object-oriented and script based software development. I have also worked with Big Data in data prediction based projects.
+				</p>
+				
+				<p>
+					If my profile doesn't fully fit the requirements you are looking for please don't hesitate in contacting me, I'm a fast learner and quick to adapt to most situations. My primary email and other resources about me can be found in my CV.
 				</p>
 			</div>
+			
 			<!--Projects Page-->			
 			<div class="content-main-information">
+			
+				<div class="page-information">
+					This part of the portfolio shows the more notable projects I've been involved in. Below each title there is a screenshot of the finished projects homepage, a list of the different technologies that were used and a short bio about the overall main function of the project and what components I developed or helped develop during the projects creation.
+				</div>
+			
 				<div id="project-container">
-				
+					
 					<figure class="project-holder">
-						<h3>galactic battlestations</h3>
+						<h3>galactic battlestations - website</h3>
 						<div class="project-main-image" title="galactic battlestations homepage"></div>
 						<ul class="project-skills-holder">
 							<li class="project-skills" title="HTML5"></li>
 							<li class="project-skills" title="CSS3"></li>
 							<li class="project-skills" title="Javascript"></li>
 						</ul>
-						<figcaption>This was a website that I co-designed and created within a group whilst at university, it was designed to advertise a game called Galactic Battlestations that was being developed at the university. It’s main intention was to advertise it’s key features as well as the social media accounts that are attached to it.  </figcaption>
+						<figcaption>
+							<p>
+								This was a website that I co-designed and created whilst at university. It was designed to advertise a game called Galactic Battlestations which was being developed by another group. The websites main intention was to demonstrate the games key features, concept artwork and it's social media profiles.
+							</p>
+							
+							<p>
+								I was primarily in charge of the websites design and styling as well as implementing the social media apis, improving the websites SEO and dealing with the FTP uploads.
+							</p>
+						</figcaption>
 					</figure>
 					
 					<figure class="project-holder">
-						<h3>assignment 1</h3>
-						<div class="project-main-image" title="galactic battlestations"></div>
+						<h3>university of gloucestershire computing - mobile application</h3>
+						<div class="project-main-image" title="university of gloucestershire computing application homepage"></div>
 						<ul class="project-skills-holder">
 							<li class="project-skills" title="HTML5"></li>
 							<li class="project-skills" title="CSS3"></li>
@@ -66,12 +92,16 @@
 							<li class="project-skills" title="JQuery"></li>
 							<li class="project-skills" title="JQuery Mobile"></li>
 						</ul>
-						<figcaption>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</figcaption>
+						<figcaption>
+							<p>
+								I develpoed the mobile application for students taking a computing based course at the University of Gloucestershire. It contains the course maps for some of the different degrees you can take, a Google map api showing the users current location, the university location as well as the optimal driving route between the two. It also allowed for note taking which was saved locally to user’s device.
+							</p>
+						</figcaption>
 					</figure>
 					
 					<figure class="project-holder">
-						<h3>assignment 2</h3>
-						<div class="project-main-image" title="galactic battlestations"></div>
+						<h3>cheltenham finder - mobile application</h3>
+						<div class="project-main-image" title="cheltenham finder mobile application homepage"></div>
 						<ul class="project-skills-holder">
 							<li class="project-skills" title="HTML5"></li>
 							<li class="project-skills" title="CSS3"></li>
@@ -83,17 +113,65 @@
 							<li class="project-skills" title="mySQL"></li>
 							<li class="project-skills" title="Ajax"></li>
 						</ul>
-						<figcaption>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</figcaption>
+						<figcaption>
+							<p>
+								I developed this mobile application together with another student whilst at university. This gave the user an up-to-date news feed on any current big event happening within the Cheltenham area. The events locations were displayed on the intergrated Google Maps api and users could plot a travel route with various different types of transportation methods to each unique event. This was accomplished with PHP and Ajax reading off a MySQL database.
+							</p>
+							
+							<p>
+								I was primarily resposible for the development and maintenance of the backend systems, including JavaScript, PHP and Ajax. I also implemented the JQuery Mobile UI and got the PhoneGap mobile wrapper working across multiple mobile devices.
+							</p>						
+						</figcaption>
+					</figure>
+					
+					<figure class="project-holder">
+						<h3>spinning game concept - in-browser javaScript game</h3>
+						<div class="project-main-image" title="spinning game concept main game"></div>
+						<ul class="project-skills-holder">
+							<li class="project-skills" title="HTML5"></li>
+							<li class="project-skills" title="CSS3"></li>
+							<li class="project-skills" title="Javascript"></li>
+							<li class="project-skills" title="SASS"></li>
+							<li class="project-skills" title="JQuery"></li>
+						</ul>
+						<figcaption>
+							<p>
+								The game that I'm currently developing runs in all browsers including mobile based ones and is a twist on the classic 'Simon Says' game. Instead of remembering a sequence the user has to remember where the flashing colours original position was and click there. The game gets faster, the flashing colours pop up in random places and the final complication is that it starts to rotate. The game can be extremely challenging in the higher rounds and also locally saves the users highscore to the device.
+							</p>						
+						</figcaption>
+					</figure>
+					
+					<figure class="project-holder">
+						<h3>this portfolio site - website</h3>
+						<div class="project-main-image" title="personal portfolio website homepage"></div>
+						<ul class="project-skills-holder">
+							<li class="project-skills" title="HTML5"></li>
+							<li class="project-skills" title="CSS3"></li>
+							<li class="project-skills" title="Javascript"></li>
+							<li class="project-skills" title="SASS"></li>
+							<li class="project-skills" title="JQuery"></li>
+						</ul>
+						<figcaption>
+							<p>
+								I have included this portfolio site within my projects section as it is an example of my ability to develop websites that utilise a multitude of web based technologies and are also mobile compatible. 
+							</p>					
+						</figcaption>
 					</figure>
 					
 				</div>
 			</div>
+			
 			<!--Skills Page-->
 			<div class="content-main-information">
+			
+				<div class="page-information">
+					The final part of the portfolio is divided into two sections, the first shows of the technology based skills that I'm extremely experienced in and have used within multiple projects. The second section contains the technolgy skills I have less experience in but I understand the principles behind them.
+				</div>
+			
 				<div id="skills-container">
 
 					<div class="skills-section">
-						<h3 class="skills-definition">great</h3>
+						<h3 class="skills-definition">highly experienced</h3>
 						
 						<figure class="skills-box" title="HTML5">
 							<div class="skills-image" title="HTML5 Logo"></div>
@@ -132,7 +210,7 @@
 					</div>
 					
 					<div class="skills-section">
-						<h3 class="skills-definition">good</h3>
+						<h3 class="skills-definition">mildly experienced</h3>
 						
 						<figure class="skills-box" title="php">
 							<div class="skills-image" title="php logo"></div>
@@ -158,11 +236,20 @@
 							<div class="skills-image" title="mongodb logo"></div>
 							<figcaption>mongodb</figcaption>
 						</figure>
+						
+						<figure class="skills-box" title="scala">
+							<div class="skills-image" title="scala logo"></div>
+							<figcaption>scala</figcaption>
+						</figure>
 					</div>
 					
 				</div>		
 			</div>
+		
 		</main>
+		
+		<a id="main-footer" href="DOCUMENTS/ReeceKelly-CV.docx" download title="click to download my CV">CV</a>
+	
 	</body>
 	
 	<script type="text/javascript">
